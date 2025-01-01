@@ -63,23 +63,27 @@ include('./sidebar.php');
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Username</th>
-                <th>Email</th>
+                <th>Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Distance</th>
               
             </tr>
         </thead>
         <tbody>
             <?php
             // Fetch user data
-            $sql = "SELECT * FROM users";
+            $sql = "SELECT * FROM route";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // Output data of each row
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>
                             <td>" . $row['id'] . "</td>
-                            <td>" . $row['username'] . "</td>
-                            <td>" . $row['email'] . "</td>
+                            <td>" . $row['name'] . "</td>
+                            <td>" . $row['Source'] . "</td>
+                            <td>" . $row['Desfination'] . "</td>
+                            <td>" . $row['Distance'] . "</td>
                             
                           </tr>";
                 }

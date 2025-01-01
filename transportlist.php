@@ -2,6 +2,9 @@
 include('./header.php');
 include('./sidebar.php');
 ?>
+
+
+
 <style>
     /* Basic reset */
     * {
@@ -54,34 +57,36 @@ include('./sidebar.php');
         background-color: #ddd;
     }
 </style>
-<!-- Main Content -->
 <div class="main-content">
-    <h1>User Details</h1>
+    <h1>Transport Details</h1>
 
     <!-- User Table -->
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Username</th>
-                <th>Email</th>
+                <th>Type</th>
+                <th>Capacity</th>
+                <th>RegNumber</th>
+           
               
             </tr>
         </thead>
         <tbody>
             <?php
             // Fetch user data
-            $sql = "SELECT * FROM users";
+            $sql = "SELECT * FROM transport";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // Output data of each row
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>
                             <td>" . $row['id'] . "</td>
-                            <td>" . $row['username'] . "</td>
-                            <td>" . $row['email'] . "</td>
-                            
-                          </tr>";
+                            <td>" . $row['Types'] . "</td>
+                            <td>" . $row['Capacity'] . "</td>
+                            <td>" . $row['RegNumber'] . "</td>
+                          
+                         </tr>";
                 }
             } else {
                 echo "<tr><td colspan='4'>No users found</td></tr>";
