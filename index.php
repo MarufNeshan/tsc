@@ -6,6 +6,8 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "tsc";
+//$name = $_POST[]
+"insert into user (id, username, email, password) values()";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -16,6 +18,10 @@ if ($conn->connect_error) {
 } else {
     echo "Connected successfully to the database.";
 }
+
+// Close connection
+$conn->close();
+?>
 
 // Close connection
 $conn->close();
