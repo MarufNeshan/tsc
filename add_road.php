@@ -26,31 +26,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- Main Content -->
 <div class="main-content">
-    <h2 class="text-center">Enter Travel Information</h2>
-
-    <!-- Form for collecting data -->
+    <h2>Add Bus Payment</h2>
     <form action="" method="POST">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+        <div class="form-group">
+            <label for="Busid">Bus ID:</label>
+            <input type="text" id="Busid" name="Busid" required>
         </div>
-        <div class="mb-3">
-            <label for="source" class="form-label">Source</label>
-            <input type="text" class="form-control" id="source" name="source" required>
+        <div class="form-group">
+            <label for="RouteId">Route ID:</label>
+            <input type="text" id="RouteId" name="RouteId" required>
         </div>
-        <div class="mb-3">
-            <label for="destination" class="form-label">Destination</label>
-            <input type="text" class="form-control" id="destination" name="destination" required>
+        <div class="form-group">
+            <label for="Amount">Amount:</label>
+            <input type="text" id="Amount" name="Amount" required>
         </div>
-        <div class="mb-3">
-            <label for="distance" class="form-label">Distance (in km)</label>
-            <input type="number" class="form-control" id="distance" name="distance" required>
+        <div class="form-group">
+            <button type="submit">Submit</button>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
-</div>
 </div>
 </body>
-
 </html>

@@ -56,7 +56,7 @@ include('./sidebar.php');
 </style>
 <!-- Main Content -->
 <div class="main-content">
-    <h1>Road Details</h1>
+    <h1>Stop Details</h1>
 
     <!-- User Table -->
     <table>
@@ -64,10 +64,7 @@ include('./sidebar.php');
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Source</th>
-                <th>Destination</th>
-                <th>Distance</th>
-              
+                <th>Route_Id</th>
             </tr>
         </thead>
         <tbody>
@@ -79,12 +76,10 @@ include('./sidebar.php');
                 // Output data of each row
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>
-                            <td>" . $row['id'] . "</td>
+                           <td>" . $row['id'] . "</td>
                             <td>" . $row['name'] . "</td>
-                            <td>" . $row['Source'] . "</td>
-                            <td>" . $row['Desfination'] . "</td>
-                            <td>" . $row['Distance'] . "</td>
-                            
+                            <td>" . $row['Route_Id'] . "</td>
+                             
                           </tr>";
                 }
             } else {

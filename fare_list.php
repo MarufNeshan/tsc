@@ -56,34 +56,34 @@ include('./sidebar.php');
 </style>
 <!-- Main Content -->
 <div class="main-content">
-    <h1>Road Details</h1>
+    <h1>Fear Details</h1>
 
     <!-- User Table -->
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Source</th>
-                <th>Destination</th>
-                <th>Distance</th>
+                <th>Bus ID</th>
+                <th>Route ID</th>
+                <th>Amount</th>
+             
               
             </tr>
         </thead>
         <tbody>
             <?php
             // Fetch user data
-            $sql = "SELECT * FROM route";
+            $sql = "SELECT * FROM fear";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // Output data of each row
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>
                             <td>" . $row['id'] . "</td>
-                            <td>" . $row['name'] . "</td>
-                            <td>" . $row['Source'] . "</td>
-                            <td>" . $row['Desfination'] . "</td>
-                            <td>" . $row['Distance'] . "</td>
+                            <td>" . $row['Busid'] . "</td>
+                            <td>" . $row['RouteId'] . "</td>
+                            <td>" . $row['Amount'] . "</td>
+                          
                             
                           </tr>";
                 }
