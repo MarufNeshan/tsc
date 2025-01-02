@@ -73,7 +73,7 @@ include('./sidebar.php');
         <tbody>
             <?php
             // Fetch user data
-            $sql = "SELECT * FROM fear";
+            $sql = "SELECT * FROM fare";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // Output data of each row

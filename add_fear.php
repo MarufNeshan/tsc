@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    header("Location: transportlist.php");
+    header("Location: fear_list.php");
 }
 ?>
 
